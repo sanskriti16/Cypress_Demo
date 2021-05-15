@@ -3,12 +3,6 @@
     "password": "AFlipkart",
     "number": "9860534474",
     "email": "ssanskriti90@gmail.com",
-    "loginMessage": "My Account"
-  },
-  "logout": {
-    "password": "AFlipkart",
-    "number": "9860534474",
-    "email": "ssanskriti90@gmail.com",
     "loginMessage": "My Account",
     "url": "https://www.flipkart.com/"
   },
@@ -17,6 +11,13 @@
     "number": "9860534474",
     "email": "ssanskriti90@gmail.com",
     "number1": "986053447"
+  },
+  "logout": {
+    "password": "AFlipkart",
+    "number": "9860534474",
+    "email": "ssanskriti90@gmail.com",
+    "loginMessage": "My Account",
+    "url": "https://www.flipkart.com/"
   },
   "specificProduct": {
     "searchKeyword": "iPhone",
@@ -32,13 +33,6 @@
   "productDetails": {
     "url": "https://www.flipkart.com/apple-iphone-12-purple-64-gb/p/itmfca1e77621c65",
     "name": "APPLE iPhone 12 (Purple, 64 GB)",
-    "price": "79,900"
-  },
-  "password": "AFlipkart",
-  "number": "9860534474",
-  "email": "ssanskriti90@gmail.com",
-  "pincode": "800001",
-  "item": "Sanitizer",
-  "url": "https://www.flipkart.com/",
-  "loginMessage": "My Account"
+    "price": "69,900"
+  }
 }

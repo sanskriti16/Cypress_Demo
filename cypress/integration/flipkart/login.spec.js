@@ -9,7 +9,7 @@ describe('Login Test suite', function () {
             this.user = data.user
             this.invalidUserWrongPassword = data.invalidUserWrongPassword
             this.url = data.url
-            cy.visit(this.url)
+            cy.visit(this.user.url)
         })
     })
 
