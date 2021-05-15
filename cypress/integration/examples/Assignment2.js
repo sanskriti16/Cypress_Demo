@@ -27,18 +27,20 @@ describe('My First Test Suite', function () {
 
         // Sanitizer Purchase
 
-        cy.Purchase(this.login.item, this.login.pincode)
+        //cy.Purchase(this.login.item, this.login.pincode)
 
         // Mobile Purchase
 
-        cy.MobilePhone('iPhone', this.login.pincode, 'APPLE iPhone 12 Mini (Purple, 64 GB')
+        //cy.specificProduct(this.login.searchKeyword, this.login.pincode, this.login.productName)
 
 
         //Logout
 
-        cy.contains("My Account").trigger('mouseover')
-        cy.wait(5000)
-        cy.contains('Logout').click()
+        //cy.contains("My Account").trigger('mouseover')
+        //cy.wait(5000)
+        //cy.contains('Logout').click()
+
+        cy.logOut(this.login.loginMessage)
 
     })
 })

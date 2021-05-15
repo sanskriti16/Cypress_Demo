@@ -11,17 +11,6 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
-
-
-
-Cypress.Commands.add('Login', (email, password) => {
-    cy.contains('Login').click()
-    cy.get('form div.IiD88i:nth-child(1)').type(email)
-    cy.get('form div.IiD88i:nth-child(2)').type(password)
-    cy.get('._1D1L_j').click()
-
-})
-
 /*
 Cypress.Commands.add('Login', (number, password) => {
     cy.get('._1_3w1N').click()
@@ -33,26 +22,26 @@ Cypress.Commands.add('Login', (number, password) => {
     cy.get("._2KpZ6l > span").click()
 
 })
-
 */
 
+Cypress.Commands.add('Login', (email, password) => {
+    cy.contains('Login').click()
+    cy.get('form div.IiD88i:nth-child(1)').type(email)
+    cy.get('form div.IiD88i:nth-child(2)').type(password)
+    cy.get('._1D1L_j').click()
 
+})
 
-
-
-Cypress.Commands.add('Purchase', (item, pincode) => {
+Cypress.Commands.add('productSearch', (item, pincode) => {
     cy.get('input[name="q"]').type(item)
     cy.get('.L0Z3Pu').click()
     cy.get('a._2rpwqI').eq(0).invoke('removeAttr', 'target').click()
     cy.get('#pincodeInputId').type(pincode)
     cy.get('._2P_LDn').click()
     cy.wait(4000)
-
-
-
 })
 
-Cypress.Commands.add('MobilePhone', (mobile, pincode, model) => {
+Cypress.Commands.add('specificProduct', (mobile, pincode, model) => {
     cy.get('input[name="q"]').type(mobile)
     cy.get('.L0Z3Pu').click()
     cy.contains("Newest First").click()
@@ -60,7 +49,12 @@ Cypress.Commands.add('MobilePhone', (mobile, pincode, model) => {
     cy.wait(4000)
     cy.get('#pincodeInputId').type(pincode)
     cy.get('._2P_LDn').click()
+})
 
+Cypress.Commands.add('logOut', (loginMessage) => {
+    cy.contains(loginMessage).trigger('mouseover')
+    cy.wait(5000)
+    cy.contains('Logout').click()
 
 })
 
