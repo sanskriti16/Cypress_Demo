@@ -16,8 +16,4 @@ describe('Specific Product Test suite', function () {
     it('validate url', function () {
         cy.url().should('includes', 'apple-iphone-12-mini-purple-64-gb')
     })
-
-
-
-
 })
