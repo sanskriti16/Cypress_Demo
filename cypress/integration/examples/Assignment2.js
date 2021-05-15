@@ -24,6 +24,7 @@ describe('My First Test Suite', function () {
 
 
 
+
         // Sanitizer Purchase
 
         cy.Purchase(this.login.item, this.login.pincode)
