@@ -6,29 +6,29 @@ describe('Login Test suite', function () {
 
         cy.fixture('example').then(function (data) {
 
-            this.user = data.user
+            this.loginuser = data.loginuser
             this.invalidUserWrongPassword = data.invalidUserWrongPassword
             this.url = data.url
-            cy.visit(this.user.url)
+            cy.visit(this.loginuser.url)
         })
     })
 
     it('login using mobile number', function () {
         // Login
-        cy.Login(this.user.number, this.user.password)
+        cy.Login(this.loginuser.number, this.loginuser.password)
 
         //verify user is logged in or not
-        cy.contains(this.user.loginMessage).trigger('mouseover')
+        cy.contains(this.loginuser.loginMessage).trigger('mouseover')
         cy.contains('My Profile').should('be.visible')
 
     })
 
     it('login using email', function () {
         // Login
-        cy.Login(this.user.email, this.user.password)
+        cy.Login(this.loginuser.email, this.loginuser.password)
 
         //verify user is logged in or not
-        cy.contains(this.user.loginMessage).should('be.visible')
+        cy.contains(this.loginuser.loginMessage).should('be.visible')
     })
 
     it('invalid password', function () {

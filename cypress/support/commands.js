@@ -46,7 +46,7 @@ Cypress.Commands.add('specificProduct', (mobile, pincode, model) => {
     cy.get('.L0Z3Pu').click()
     cy.contains("Newest First").click()
     cy.contains(model).invoke('removeAttr', 'target').click()
-    cy.wait(4000)
+    cy.wait(6000)
     cy.get('#pincodeInputId').type(pincode)
     cy.get('._2P_LDn').click()
 })
