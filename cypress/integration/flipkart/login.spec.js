@@ -4,7 +4,7 @@ describe('Login Test suite', function () {
 
     beforeEach(() => {
 
-        cy.fixture('example').then(function (data) {
+        cy.fixture('example.json').then(function (data) {
 
             this.loginuser = data.loginuser
             this.invalidUserWrongPassword = data.invalidUserWrongPassword

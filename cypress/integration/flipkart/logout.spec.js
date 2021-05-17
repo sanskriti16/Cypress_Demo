@@ -2,7 +2,7 @@
 
 describe('logout', function () {
     before(() => {
-        cy.fixture('example').then(function (data) {
+        cy.fixture('example.json').then(function (data) {
             this.logout = data.logout
         })
     })
